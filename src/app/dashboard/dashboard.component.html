@@ -1,0 +1,11 @@
+<h2>Top Heroes</h2>
+<div class="heroes-menu">
+  <a *ngFor="let hero of heroes"
+  (click)="onSelect(hero)"
+  >
+    {{hero.name}}
+  </a>
+</div>
+<div *ngIf="selectedHero">
+    <app-hero-details [hero]="selectedHero"></app-hero-details>
+</div>
