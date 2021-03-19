@@ -1,4 +1,4 @@
-<h2>Top Heroes</h2>
+<!-- <h2>Top Heroes</h2>
 <div class="heroes-menu">
   <a *ngFor="let hero of heroes"
   (click)="onSelect(hero)"
@@ -8,4 +8,13 @@
 </div>
 <div *ngIf="selectedHero">
     <app-hero-details [hero]="selectedHero"></app-hero-details>
+</div> -->
+
+
+<h2>Top Heroes</h2>
+<div class="heroes-menu">
+  <a *ngFor="let hero of heroes"
+  routerLink="/detail/{{hero.id}}">
+  {{hero.name}}
+  </a>
 </div>
